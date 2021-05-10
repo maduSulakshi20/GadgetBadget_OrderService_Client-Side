@@ -9,7 +9,7 @@
 <title>Order Management</title>
 
 <link rel="stylesheet" href="Views/bootstrap.min.css">
-<script src="Components/jquery-3.6.0.min.js"></script>
+<script src="Components/jquery-3.2.1.min.js"></script>
 <script src="Components/orders.js"></script>
 </head>
 <body>
@@ -43,7 +43,5 @@
 </div>
 </div>
 </div>
-	
-	
 </body>
 </html>

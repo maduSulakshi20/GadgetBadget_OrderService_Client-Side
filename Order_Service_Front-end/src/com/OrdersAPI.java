@@ -46,14 +46,15 @@ public class OrdersAPI extends HttpServlet {
 				request.getParameter("ProductName"), 
 				request.getParameter("Date"), 
 				request.getParameter("BuyerName")); 
-				response.getWriter().write(output); 
+		response.getWriter().write(output); 
 	}
 
 	/**
 	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
 	 * changed
 	 */
-	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
 		Map paras = getParasMap(request); 
 		
 		String output = orderObj.updateOrders(paras.get("hidOrderIDSave").toString(), 
