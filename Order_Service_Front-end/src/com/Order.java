@@ -48,7 +48,8 @@ public class Order {
 			 con.close(); 
 			 
 			 String newOrders = readOrders(); 
-			 output = "{\"status\":\"success\", \"data\": \"" + newOrders + "\"}";
+			 output = "{\"status\":\"success\", \"data\": \""
+					 + newOrders + "\"}";
 			 
 		} 
 		catch (Exception e) 
@@ -96,9 +97,10 @@ public class Order {
 		 output += "<td>" + BuyerName + "</td>";
 		 
 		 // buttons
-		 output += "<td><input name='btnUpdate' type='button' value='Update' "
+		 output  += "<td><input name='btnUpdate' type='button' value='Update' "
 				 + "class=' btnUpdate btn btn-danger' data-OrderID='" + OrderID + "'></td>"
 				 + "<td><input name = 'btnRemove' type ='button' value ='Remove' "
+				 + "class = 'btnRemove btn btn-danger' date-OrderID ='" + OrderID + "'>"
 				 + "</td></tr>"; 
 	 } 
 	 con.close(); 
