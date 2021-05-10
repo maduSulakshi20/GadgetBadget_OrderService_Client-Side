@@ -46,11 +46,14 @@ public class Order {
 			 //execute the statement
 			 preparedStmt.execute(); 
 			 con.close(); 
-			 output = "Inserted successfully"; 
+			 
+			 String newOrders = readOrders(); 
+			 output = "{\"status\":\"success\", \"data\": \"" + newOrders + "\"}";
+			 
 		} 
 		catch (Exception e) 
 		{ 
-		 output = "Error while inserting"; 
+		 output =  "{\"status\":\"error\", \"data\":  \"Error while inserting the order.\"}";  
 		 System.err.println(e.getMessage()); 
 		} 
 	return output; 
@@ -86,18 +89,17 @@ public class Order {
 		 String BuyerName = rs.getString("BuyerName"); 
 		 
 		 // Add a row into the html table
-		 output += "<tr><td><input id='hidOrderIDUpdate' name= 'hidOrderIDUpdate' type ='hidden' value ='" + OrderID + "'>"
-		 + ProductID + "</td>";
+		// output += "<tr><td><input id='hidOrderIDUpdate' name= 'hidOrderIDUpdate' type ='hidden' value ='" + OrderID + "'>"
+		 output += "<tr><td>" + ProductID + "</td>";
 		 output += "<td>" + ProductName + "</td>"; 
 		 output += "<td>" + Date + "</td>"; 
 		 output += "<td>" + BuyerName + "</td>";
 		 
 		 // buttons
-		 output += "<td><input name='btnUpdate' type='button' value='Update' class=' btnUpdate btn btn-danger'></td>"
-		 + "<td><form method='post' action='orders.jsp'>"
-		 + "<input name = 'btnRemove' type ='submit' value ='Remove' class='btn btn-danger'>"
-		 + "<input name='hidOrderIDDelete' type='hidden' value= '" + OrderID + "'>" + 
-		 "</form></td></tr>"; 
+		 output += "<td><input name='btnUpdate' type='button' value='Update' "
+				 + "class=' btnUpdate btn btn-danger' data-OrderID='" + OrderID + "'></td>"
+				 + "<td><input name = 'btnRemove' type ='button' value ='Remove' "
+				 + "</td></tr>"; 
 	 } 
 	 con.close(); 
 	 
@@ -132,11 +134,15 @@ public class Order {
 			 // execute the statement
 			 preparedStmt.execute(); 
 			 con.close(); 
-			 output = "Deleted successfully"; 
+			
+			 String newOrders = readOrders(); 
+			 output = "{\"status\":\"success\", \"data\": \"" + 
+					 newOrders + "\"}"; 
+			 
 		} 
 		catch (Exception e) 
 		{ 
-			 output = "Error while deleting the order."; 
+			 output = "{\"status\":\"error\", \"data\": \"Error while deleting the order.\"}";
 			 System.err.println(e.getMessage()); 
 		} 
 	return output; 
@@ -166,14 +172,15 @@ public class Order {
 			 
 			// execute the statement
 			preparedStmt.execute(); 
-			con.close(); 
-			//String newOrders = readOrders(); 
-			output = "Updated Successfully"; 
+			con.close();  
+			String newOrders = readOrders(); 
+			 output = "{\"status\":\"success\", \"data\": \"" + 
+					 newOrders + "\"}"; 
 		} 
 		
 		catch (Exception e) 
 		{ 
-			output = "Error while updating the order."; 
+			output = "{\"status\":\"error\", \"data\": \"Error while updating the order.\"}"; 
 			System.err.println(e.getMessage()); 
 		} 
 		return output; 
