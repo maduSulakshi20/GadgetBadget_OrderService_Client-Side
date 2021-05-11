@@ -90,17 +90,18 @@ public class Order {
 		 String BuyerName = rs.getString("BuyerName"); 
 		 
 		 // Add a row into the html table
-		// output += "<tr><td><input id='hidOrderIDUpdate' name= 'hidOrderIDUpdate' type ='hidden' value ='" + OrderID + "'>"
-		 output += "<tr><td>" + ProductID + "</td>";
+		 // changed
+		 output += "<tr><td><input id='hidOrderIDUpdate' name= 'hidOrderIDUpdate' type ='hidden' value ='" + OrderID + "'>" + ProductID +"</td>";
+		 //output += "<tr><td>" + ProductID + "</td>";
 		 output += "<td>" + ProductName + "</td>"; 
 		 output += "<td>" + Date + "</td>"; 
 		 output += "<td>" + BuyerName + "</td>";
 		 
 		 // buttons
 		 output  += "<td><input name='btnUpdate' type='button' value='Update' "
-				 + "class=' btnUpdate btn btn-danger' data-OrderID='" + OrderID + "'></td>"
+				 + "class='btnUpdate btn btn-danger' data-OrderID='" + OrderID + "'></td>"
 				 + "<td><input name = 'btnRemove' type ='button' value ='Remove' "
-				 + "class = 'btnRemove btn btn-danger' date-OrderID ='" + OrderID + "'>"
+				 + "class ='btnRemove btn btn-danger' date-OrderID ='" + OrderID + "'>"
 				 + "</td></tr>"; 
 	 } 
 	 con.close(); 

@@ -21,7 +21,7 @@
 	<div class="col-sm-10">
 	Product ID: <input name="ProductID" id ="ProductID" type="text" class="form-control form-control-sm"><br>
 	Product Name: <input name="ProductName" id ="ProductName" type="text" class="form-control form-control-sm"><br> 
-	Date:(YY-MM-DD) <input name="Date" id ="Date" type="text" class="form-control form-control-sm"><br> 
+	Date (YY-MM-DD): <input name="Date" id ="Date" type="text" class="form-control form-control-sm"><br> 
 	Buyer Name: <input name="BuyerName" id ="BuyerName" type="text" class="form-control form-control-sm"><br>
 	
 	<input name="btnSave" id ="btnSave" type="button" value="Save" class="btn btn-outline-primary"> 
