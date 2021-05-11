@@ -72,7 +72,7 @@ public class Order {
 			} 
 			
 	 // Prepare the html table to be displayed
-	 output = "<table border='1'><tr><th>Product ID</th>" 
+	 output = "<table border='1' class= 'table table-striped'><tr class= 'table-primary' ><th>Product ID</th>" 
 	 +"<th>Product Name</th><th>Date</th>"
 	 + "<th>Buyer Name</th>" 
 	 + "<th>Update</th><th>Remove</th></tr>"; 

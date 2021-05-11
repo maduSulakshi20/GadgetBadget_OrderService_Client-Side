@@ -11,21 +11,37 @@
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
 <script src="Components/orders.js"></script>
+<style>
+body {
+  background-color: #ffb3b3;
+}
+.form-group {
+	border-style: solid;
+	background-color : lightblue;
+}
+h1 {
+	font-family: Arial;
+	text-align: center;
+}
+</style>
 </head>
 <body>
 <div class="container">
  <div class="row">
  	<div class="col">
-	<h1>Items Management</h1>
+	<h1 >Items Management</h1>
 	<form id="formOrder" name="formOrder">
-	<div class="col-sm-10">
+	<div class="form-group">
+	<div class="col-sm-12">
+	<br>
 	Product ID: <input name="ProductID" id ="ProductID" type="text" class="form-control form-control-sm"><br>
 	Product Name: <input name="ProductName" id ="ProductName" type="text" class="form-control form-control-sm"><br> 
 	Date (YY-MM-DD): <input name="Date" id ="Date" type="text" class="form-control form-control-sm"><br> 
 	Buyer Name: <input name="BuyerName" id ="BuyerName" type="text" class="form-control form-control-sm"><br>
 	
-	<input name="btnSave" id ="btnSave" type="button" value="Save" class="btn btn-outline-primary"> 
-	<input type ="hidden" id="hidOrderIDSave" name="hidOrderIDSave" value = "">
+	<input name="btnSave" id ="btnSave" type="button" value="Save" class="btn btn-outline-primary btn-block"> 
+	<input type ="hidden" id="hidOrderIDSave" name="hidOrderIDSave" value = ""><br><br>
+	</div>
 	</div>
 	</form>
 	
@@ -43,5 +59,6 @@
 </div>
 </div>
 </div>
+
 </body>
 </html>
