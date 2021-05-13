@@ -91,18 +91,18 @@ public class Order {
 		 
 		 // Add a row into the html table
 		 // changed
-		 output += "<tr><td><input id='hidOrderIDUpdate' name= 'hidOrderIDUpdate' type ='hidden' value ='" + OrderID + "'>" + ProductID +"</td>";
-		 //output += "<tr><td>" + ProductID + "</td>";
+		 //output += "<tr><td><input id='hidOrderIDUpdate' name= 'hidOrderIDUpdate' type ='hidden' value ='" + OrderID + "'>" + ProductID +"</td>";
+		 output += "<tr><td>" + ProductID + "</td>";
 		 output += "<td>" + ProductName + "</td>"; 
 		 output += "<td>" + Date + "</td>"; 
 		 output += "<td>" + BuyerName + "</td>";
 		 
 		 // buttons
-		 output  += "<td><input name='btnUpdate' type='button' value='Update' "
+		 output  += "<td><input name='btnUpdate' type='button' value='Update'"
 				 + "class='btnUpdate btn btn-danger' data-OrderID='" + OrderID + "'></td>"
-				 + "<td><input name = 'btnRemove' type ='button' value ='Remove' "
+				 + "<td><input name = 'btnDelete' type ='button' value = 'Remove'"
 				 + "class ='btnRemove btn btn-danger' date-OrderID ='" + OrderID + "'>"
-				 + "</td></tr>"; 
+				 + "</form></td></tr>"; 
 	 } 
 	 con.close(); 
 	 
