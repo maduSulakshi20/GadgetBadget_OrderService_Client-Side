@@ -102,7 +102,7 @@ public class Order {
 				 + "class='btnUpdate btn btn-danger' data-OrderID='" + OrderID + "'></td>"
 				 + "<td><input name = 'btnDelete' type ='button' value = 'Remove'"
 				 + "class ='btnRemove btn btn-danger' date-OrderID ='" + OrderID + "'>"
-				 + "</form></td></tr>"; 
+				 + "</td></tr>"; 
 	 } 
 	 con.close(); 
 	 
